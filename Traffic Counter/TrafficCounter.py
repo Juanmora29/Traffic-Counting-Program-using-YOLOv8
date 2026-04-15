@@ -3,17 +3,26 @@ from ultralytics import YOLO
 import cv2
 import cvzone
 import math
+import os
+import sys
+
+# Resolve paths relative to this script's location
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
+
+# Add script directory to path so 'sort' module can be found
+sys.path.insert(0, SCRIPT_DIR)
 from sort import *
 
 #Video Input
-cap = cv2.VideoCapture("../Videos/trafficsmall.mp4")  # For Video
+cap = cv2.VideoCapture(os.path.join(PROJECT_DIR, "Videos", "trafficsmall.mp4"))  # For Video
 #For Webcam
 #cap = cv2.VideoCapture(0)
 #cap.set(3,1280)
 #cap.set(4,720)
 
 #Loading YOLO model v8
-model = YOLO("../Yolo-Weights/yolov8m.pt")
+model = YOLO(os.path.join(PROJECT_DIR, "Yolo-Weights", "yolov8m.pt"))
 
 #Classes that are being detected
 classNames = ["person", "bicycle", "car", "motorbike", "aeroplane", "bus", "train", "truck", "boat",
@@ -120,7 +129,7 @@ while True:
                 colorR=(230, 230, 250),font=cv2.FONT_HERSHEY_PLAIN,offset=10,border=2,colorB=(0, 0, 0))
 
     #Using File Handling to store the vehicle count in a file.
-    f=open("../vehicle_count.txt", "w")
+    f=open(os.path.join(PROJECT_DIR, "vehicle_count.txt"), "w")
     f.write("Traffic Count is ")
     f.write(vehicle_count)
     f.close()

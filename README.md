@@ -82,18 +82,17 @@ The program will save the vehicle count in the `vehicle_count.txt` file in the p
 
 here: vid - vehicle id
 
-
 ## Built With
 
-* [Python](https://www.python.org/doc/) - Front-End Application
-* [Ultralytics](https://github.com/ultralytics/ultralytics) - YOLOv8 Object Detection
-* [OpenCV](https://opencv.org/) - Computer Vision Library
-* [NumPy](https://numpy.org/doc/) - Numerical Computing Library
+- [Python](https://www.python.org/doc/) - Front-End Application
+- [Ultralytics](https://github.com/ultralytics/ultralytics) - YOLOv8 Object Detection
+- [OpenCV](https://opencv.org/) - Computer Vision Library
+- [NumPy](https://numpy.org/doc/) - Numerical Computing Library
 
 ## Authors
 
-* **Anujesh Bansal** - *Initial work* - [your_username](https://github.com/your_username)
+- **Anujesh Bansal** - _Initial work_ - [your_username](https://github.com/your_username)
 
 ## Acknowledgments
 
-* Inspiration - This project was inspired by the need for accurate traffic analysis and management using concepts of deep learning and neural networks.
+- Inspiration - This project was inspired by the need for accurate traffic analysis and management using concepts of deep learning and neural networks.
